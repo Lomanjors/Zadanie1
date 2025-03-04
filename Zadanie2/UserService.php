@@ -25,3 +25,4 @@ class User {
         return $this->birthday;
     }
 }
+
