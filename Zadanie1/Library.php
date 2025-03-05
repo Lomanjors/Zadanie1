@@ -1,7 +1,7 @@
 <?php
 class Library {
-    private $books = [];
-    private $users = [];
+    private array $books = [];
+    private array $users = [];
 
     public function addBook($book) :void
     {
