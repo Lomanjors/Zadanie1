@@ -1,28 +1,20 @@
 <?php
-class User {    
-    private $username;
-    private $password;
-    private $birthday;
-
-    public function __construct($username, $password, $birthday) {
-        $this->username = $username;
-        $this->password = $password;
-        $this->birthday = new DateTime($birthday);
+class UserService {
+    public function sortByUsername(array $users, $order = 'asc'): array 
+    {
+        usort($users, function($a, $b) use ($order): int 
+        {
+            return ($order === 'asc') ? strcmp($a->getUsername(), $b->getUsername()) : strcmp($b->getUsername(), $a->getUsername());
+        });
+        return $users;
     }
 
-    public function getUsername() :string
+    public function sortByBirthday(array $users, $order = 'asc'): array 
     {
-        return $this->username;
-    }
-
-    public function getPassword() :string
-    {
-        return $this->password;
-    }
-
-    public function getBirthday(): DateTime 
-    {
-        return $this->birthday;
+        usort($users, function($a, $b) use ($order): int 
+        {
+            return ($order === 'asc') ? $a->getBirthday() <=> $b->getBirthday() : $b->getBirthday() <=> $a->getBirthday();
+        });
+        return $users;
     }
 }
-
