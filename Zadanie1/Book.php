@@ -1,8 +1,8 @@
 <?php
 class Book {
-    private $title;
-    private $author;
-    private $isAvailable;
+    private string $title;
+    private string $author;
+    private string $isAvailable;
 
     public function __construct($title, $author) 
     {
