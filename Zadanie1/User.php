@@ -1,9 +1,9 @@
 <?php
 class User {
-    private $name;
-    private $userID;
-    private $borrowedBooks = [];
-    private $penalty = 0;
+    private string $name;
+    private int $userID;
+    private array $borrowedBooks = [];
+    private int $penalty = 0;
 
     public function __construct($name, $userID) {
         $this->name = $name;
