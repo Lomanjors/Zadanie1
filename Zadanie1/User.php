@@ -5,12 +5,12 @@ class User {
     private array $borrowedBooks = [];
     private int $penalty = 0;
 
-    public function __construct($name, $userID) {
+    public function __construct(string $name, int $userID) {
         $this->name = $name;
         $this->userID = $userID;
     }
 
-    public function borrowBook($book): void 
+    public function borrowBook(string $book): void 
     {
         if ($book->isAvailable()) {
             $book->setAvailable(false);
@@ -18,7 +18,7 @@ class User {
         }
     }
 
-    public function returnBook($book): void 
+    public function returnBook(string $book): void 
     {
         $key = array_search($book, $this->borrowedBooks);
         if ($key !== false) {
