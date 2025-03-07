@@ -23,7 +23,7 @@ class Library {
         return null;
     }
 
-    public function findUserById(array $userID): mixed 
+    public function findUserById(int $userID): mixed 
     {
         foreach ($this->users as $user) {
             if ($user->userID === $userID) {
