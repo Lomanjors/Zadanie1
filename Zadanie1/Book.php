@@ -26,7 +26,7 @@ class Book {
         return $this->isAvailable;
     }
 
-    public function setAvailable($availability): void 
+    public function setAvailable(bool $availability): void 
     {
         $this->isAvailable = $availability;
     }
