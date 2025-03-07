@@ -4,10 +4,10 @@ class User {
     private string $password;
     private DateTime $birthday;
 
-    public function __construct(string $username, string $password, DateTime $birthday) {
+    public function __construct(string $username, string $password, string $birthday) {
         $this->username = $username;
         $this->password = $password;
-        $this->birthday = new DateTime($birthday);
+        $this->birthday = new DateTime(datetime: $birthday);
     }
 
     public function getUsername() :string
