@@ -4,7 +4,7 @@ class Book {
     private string $author;
     private string $isAvailable;
 
-    public function __construct($title, $author) 
+    public function __construct(string $title, string $author) 
     {
         $this->title = $title;
         $this->author = $author;
