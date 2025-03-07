@@ -3,17 +3,17 @@ class Library {
     private array $books = [];
     private array $users = [];
 
-    public function addBook(array $book) :void
+    public function addBook(string $book) :void
     {
         $this->books[] = $book;
     }
 
-    public function registerUser(array $user): void  
+    public function registerUser(string $user): void  
     {
         $this->users[] = $user;
     }
 
-    public function findBookByTitle(array $title) :mixed
+    public function findBookByTitle(string $title) :mixed
     {
         foreach ($this->books as $book) {
             if ($book->getTitle() === $title) {
