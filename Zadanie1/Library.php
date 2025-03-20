@@ -1,19 +1,20 @@
 <?php
-class Library {
+class Library
+{
     private array $books = [];
     private array $users = [];
 
-    public function addBook(string $book) :void
+    public function addBook(string $book): void
     {
         $this->books[] = $book;
     }
 
-    public function registerUser(string $user): void  
+    public function registerUser(string $user): void
     {
         $this->users[] = $user;
     }
 
-    public function findBookByTitle(string $title) :mixed
+    public function findBookByTitle(string $title): mixed
     {
         foreach ($this->books as $book) {
             if ($book->getTitle() === $title) {
@@ -23,7 +24,7 @@ class Library {
         return null;
     }
 
-    public function findUserById(int $userID): mixed 
+    public function findUserById(int $userID): mixed
     {
         foreach ($this->users as $user) {
             if ($user->userID === $userID) {

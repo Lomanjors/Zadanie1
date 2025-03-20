@@ -1,16 +1,18 @@
 <?php
-class User {
+class User
+{
     private string $name;
     private int $userID;
     private array $borrowedBooks = [];
     private int $penalty = 0;
 
-    public function __construct(string $name, int $userID) {
+    public function __construct($name, $userID)
+    {
         $this->name = $name;
         $this->userID = $userID;
     }
 
-    public function borrowBook(string $book): void 
+    public function borrowBook($book): void
     {
         if ($book->isAvailable()) {
             $book->setAvailable(false);
@@ -18,7 +20,7 @@ class User {
         }
     }
 
-    public function returnBook(string $book): void 
+    public function returnBook($book): void
     {
         $key = array_search($book, $this->borrowedBooks);
         if ($key !== false) {
@@ -29,7 +31,7 @@ class User {
         }
     }
 
-    public function getPenalty(): float|int 
+    public function getPenalty(): float|int
     {
         return $this->penalty;
     }

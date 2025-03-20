@@ -15,7 +15,7 @@ $user1 = new User("Иван", 1);
 $library->registerUser($user1);
 
 $user1->borrowBook($book1);
-echo "Задолжность: " .  $user1->getPenalty(); 
+echo "Задолжность: " .  $user1->getPenalty();
 
 echo "\n";
 
