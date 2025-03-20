@@ -4,12 +4,12 @@ class Library
     private array $books = [];
     private array $users = [];
 
-    public function addBook(string $book): void
+    public function addBook($book): void
     {
         $this->books[] = $book;
     }
 
-    public function registerUser(string $user): void
+    public function registerUser($user): void
     {
         $this->users[] = $user;
     }
